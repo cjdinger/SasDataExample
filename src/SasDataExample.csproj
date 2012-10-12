@@ -124,7 +124,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /y $(TargetPath) %25appdata%25\sas\enterpriseguide\4.3\custom\.</PostBuildEvent>
+    <PostBuildEvent>mkdir "%25appdata%25\sas\enterpriseguide\4.3\custom"
+copy /y $(TargetPath) "%25appdata%25\sas\enterpriseguide\4.3\custom\."</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
